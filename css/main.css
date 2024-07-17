@@ -1,0 +1,267 @@
+@charset "UTF-8";
+*{
+    margin: 0; padding: 0;box-sizing: border-box;
+}
+
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* header 영역 */
+#header{
+    width: 100%;
+    height: 100px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{}
+.nav{}
+.main{}
+.main > li{
+    display: inline-block;
+    position: relative;
+}
+.main > li > a{
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    /* background-color: paleturquoise; */
+    border-radius: 10px 10px 0 0;
+}
+.main > li:hover > a{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sub{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 9;
+}
+.sub li{}
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: plum;
+}
+.sub li a:last-child a{
+    border-radius: 0 0 10px 10px;
+}
+.sub li a:hover{
+    background-color: white;
+}
+
+/* slide_img 영역 */
+#slide_img{
+    width: 100%;
+    height: 300px;
+    /* background-color: palegoldenrod; */
+    position: relative;
+}
+
+.fade{}
+.fade li{
+    position: absolute; 
+    left: 0 ;
+    top:0;
+}
+.fade li a{}
+.fade li a img{}
+
+/* contents 영역 */
+#contents{
+    height: 200px;
+    /* background-color: plum; */
+    display: flex;
+    justify-content: space-between;
+
+}
+#contents h2{
+    height: 30px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    line-height: 35px;
+    /* border: 1px solid black; */
+    border-radius: 5px 5px 0 0;
+    color: white;
+    /* border-bottom-color: white; */
+    background-color: black;
+}
+#contents p{
+    width: 100%;
+    height: calc(200px - 35px);
+    border-top: 3px solid beige;
+    /* background-color: wheat; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 0 10px 10px 10px;
+    
+
+}
+#contents p img{
+    filter: sepia();
+    transition: all 0.3s;
+}
+#contents p img:hover{
+    filter: none;
+}
+
+
+#contents > div{
+    width: 390px;
+    height: 200px;
+    /* background-color: rebeccapurple; */
+}
+
+.cont1{
+    position: relative;/* 공지사항 갤러리 제목 공지사항 갤러리 ul */}
+
+.cont1 h2{
+    position: absolute;
+    left: 0; top: 0;
+    cursor: pointer;
+
+}
+.cont1 h2.b_on{
+    background-color: #ddd !important;
+}
+.cont1 ul{
+    width: 100%;
+    height: calc(200px - 35px);
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    border-top:3px solid rgb(0 ,0 ,0);
+    
+}
+
+
+
+.notice{}
+.notice ul{
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+    padding: 10px;
+    
+    
+}
+.notice ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px dotted gray ;
+}
+.notice ul li a{
+    width: 70%;
+    text-wrap: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+.notice ul li span{}
+
+.gallery{}
+.gallery h2{
+    left: 100px;
+}
+.gallery ul{
+    /* display:flex; */
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.gallery ul li{}
+.gallery ul li a{}
+.gallery ul li a img{}
+#footer{
+    width: 100%;
+    height: 100px;
+    /* background-color: palevioletred; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f_logo{
+    width: 200px;
+    /* height: 100px; */
+
+}
+.f_right{
+    width: 1000px;
+    /* height: 100px; */
+}
+.f_up a{
+    display: inline-block;
+    padding: 0  10px;
+    border-right: 1px solid gray;
+    line-height:1
+
+}
+.f_up a:last-child{border-right: none;}
+.f_up a:hover{
+    text-decoration: underline;
+}
+    
+
+.f_right >div{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+}
+.pop{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border: 10px groove black;
+    border-radius: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.pop h3{
+    text-align: center;
+    line-height: 2;
+    border-bottom: 1px solid gray;
+}
+.pop p{
+    line-height: 2;
+    text-align: justify;
+    padding-top:20px ;
+}
+.close{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 20px;
+}
+.close:hover{
+    background-color: #ddd;
+}
